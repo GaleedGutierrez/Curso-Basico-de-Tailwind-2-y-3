@@ -1,0 +1,22 @@
+{
+  "name": "curso-basico-de-tailwind-2-y-3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GaleedGutierrez/Curso-Basico-de-Tailwind-2-y-3.git"
+  },
+  "keywords": [
+    "tailwind"
+  ],
+  "author": "Galeed Gutierrez <galeedeveloper@gmail.com> (https://galeedgutierrez.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GaleedGutierrez/Curso-Basico-de-Tailwind-2-y-3/issues"
+  },
+  "homepage": "https://github.com/GaleedGutierrez/Curso-Basico-de-Tailwind-2-y-3#readme"
+}
