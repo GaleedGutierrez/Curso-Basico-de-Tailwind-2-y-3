@@ -1,28 +1,87 @@
 {
-  "name": "curso-basico-de-tailwind-2-y-3",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/GaleedGutierrez/Curso-Basico-de-Tailwind-2-y-3.git"
-  },
-  "keywords": [
-    "tailwind"
-  ],
-  "author": "Galeed Gutierrez <galeedeveloper@gmail.com> (https://galeedgutierrez.com/)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/GaleedGutierrez/Curso-Basico-de-Tailwind-2-y-3/issues"
-  },
-  "homepage": "https://github.com/GaleedGutierrez/Curso-Basico-de-Tailwind-2-y-3#readme",
-  "dependencies": {
-    "@tailwindcss/cli": "^4.0.8",
-    "@tailwindcss/postcss": "^4.0.8",
-    "postcss": "^8.5.3",
-    "tailwindcss": "^4.0.8"
-  }
+	"name": "curso-basico-de-tailwind-2-y-3",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"prettier": "prettier . --check",
+		"prettier:fix": "prettier . --write",
+		"stylelint": "stylelint ./**/*.{css,scss} --allow-empty-input",
+		"stylelint:fix": "stylelint --fix ./**/*.{css,scss} --allow-empty-input",
+		"lint-md": "markdownlint-cli2 --config \".markdownlint-cli2.jsonc\" **/*.md \"#node_modules\"",
+		"lint-md:fix": "markdownlint-cli2 --config \".markdownlint-cli2.jsonc\" --fix **/*.md \"#node_modules\"",
+		"check-for-dupes": "jscpd ./",
+		"test:performance": "lighthouse http://localhost:4173/ --view --output html --output-path ./lighthouse-report/lighthouse-report.html",
+		"prepare": "husky || true"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/GaleedGutierrez/Curso-Basico-de-Tailwind-2-y-3.git"
+	},
+	"keywords": [
+		"tailwind"
+	],
+	"author": "Galeed Gutierrez <galeedeveloper@gmail.com> (https://galeedgutierrez.com/)",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/GaleedGutierrez/Curso-Basico-de-Tailwind-2-y-3/issues"
+	},
+	"homepage": "https://github.com/GaleedGutierrez/Curso-Basico-de-Tailwind-2-y-3#readme",
+	"dependencies": {
+		"@tailwindcss/cli": "^4.0.8",
+		"@tailwindcss/postcss": "^4.0.8",
+		"postcss": "^8.5.3",
+		"tailwindcss": "^4.0.8"
+	},
+	"prettier": {
+		"plugins": [
+			"prettier-plugin-tailwindcss"
+		],
+		"tailwindStylesheet": "./src/styles/tailwind.css",
+		"overrides": [
+			{
+				"files": "*.jsonc",
+				"options": {
+					"trailingComma": "none"
+				}
+			}
+		],
+		"singleAttributePerLine": true
+	},
+	"lint-staged": {
+		"*{css,s(a|c)ss}": "npm run stylelint:fix",
+		"*.md": "npm run lint-md:fix"
+	},
+	"jscpd": {
+		"threshold": 3.5,
+		"reporters": [
+			"consoleFull"
+		],
+		"ignore": [
+			"**/node_modules/**",
+			"**/dist/**",
+			"**/dist-dev/**",
+			"**/build/**",
+			"**/fonts/**",
+			"**/coverage/**",
+			"**/playwright-reports/**",
+			"**/test-results/**",
+			"**/lighthouse-report/**",
+			"**/tsconfig.*.json"
+		],
+		"absolute": true
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^19.7.1",
+		"@commitlint/config-conventional": "^19.7.1",
+		"husky": "^9.1.7",
+		"jscpd": "^4.0.5",
+		"markdownlint-cli2": "^0.17.2",
+		"prettier": "^3.5.2",
+		"prettier-plugin-tailwindcss": "^0.6.11",
+		"stylelint": "^16.14.1",
+		"stylelint-config-standard": "^37.0.0",
+		"stylelint-order": "^6.0.4",
+		"stylelint-prettier": "^5.0.3"
+	}
 }
