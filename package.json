@@ -4,6 +4,8 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
+		"tw:dev": "npx @tailwindcss/cli -i ./src/styles/tailwind.css -o ./public/styles/tailwind.css --watch",
+		"tw:build": "npx @tailwindcss/cli -i ./src/styles/tailwind.css -o ./src/styles/tailwind.css",
 		"prettier": "prettier . --check",
 		"prettier:fix": "prettier . --write",
 		"stylelint": "stylelint ./**/*.{css,scss} --allow-empty-input",
