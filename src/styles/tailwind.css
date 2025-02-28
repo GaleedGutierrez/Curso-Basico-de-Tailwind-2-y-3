@@ -1,1 +1,32 @@
+/* stylelint-disable-next-line import-notation */
 @import "tailwindcss";
+
+@theme {
+	/* Images */
+	--img-san-francisco: url("/public/img/sanFrancisco.webp");
+	--img-san-francisco-desktop: url("/public/img/sanFranciscoDesktop.webp");
+	--img-yosemite: url("/public/img/yosemite.webp");
+	--img-la: url("/public/img/LA.webp");
+	--img-seattle: url("/public/img/seattle.webp");
+	--img-new-york: url("/public/img/new_york.webp");
+	--img-norway: url("/public/img/norway.webp");
+	--img-sydney: url("/public/img/sydney.webp");
+	--img-miami: url("/public/img/miami.webp");
+	--img-switzerland: url("/public/img/switzerland.webp");
+	--img-bali: url("/public/img/bali.webp");
+	--img-chicago: url("/public/img/chicago.webp");
+	--img-europe: url("/public/img/europe.webp");
+	--img-iceland: url("/public/img/iceland.webp");
+
+	/* Colors */
+	--color-primary: oklch(55.81% 0.1934 16.64);
+	--color-secondary: oklch(67.38% 0.1553 117.82);
+	--color-tertiary: oklch(71.15% 0.0856 222.97);
+
+	/* Font */
+	--font-fallback:
+		"Adjusted Arial Fallback", system-ui, -apple-system,
+		blinkmacsystemfont, "Segoe UI", "Noto Sans", helvetica,
+		arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+	--font-primary: "Montserrat", var(--font-fallback);
+}

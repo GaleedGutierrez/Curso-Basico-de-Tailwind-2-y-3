@@ -11,6 +11,8 @@
 		"color-function-notation": "modern",
 		"font-weight-notation": "named-where-possible",
 		"property-no-vendor-prefix": true,
+		"at-rule-no-unknown":
+			[true, {"ignoreAtRules": ["tailwind", "theme", "source", "utility", "variants", "custom-variant", "apply"]}],
 		"function-disallowed-list": [
 			"rgba",
 			"hsla",

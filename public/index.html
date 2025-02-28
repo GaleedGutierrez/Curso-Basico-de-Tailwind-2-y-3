@@ -10,9 +10,60 @@
 			rel="stylesheet"
 			href="./styles/tailwind.css"
 		/>
+		<style>
+			/* Your font. E.g.: */
+			/* You can use this guide https://www.debugbear.com/blog/website-font-performance for your font */
+			@font-face {
+				font-family: "Adjusted Arial Fallback";
+				src: local(Arial);
+				size-adjust: 105%;
+				ascent-override: normal;
+				descent-override: normal;
+				line-gap-override: normal;
+			}
+
+			/* instrument-sans-regular - latin */
+			@font-face {
+				font-family: "Montserrat";
+
+				/* You can find the different name on https://fontdrop.info/ */
+				src:
+					local("Montserrat Regular"),
+					local("Montserrat-Regular"),
+					url("./assets/typography/Montserrat/Montserrat-Regular.woff")
+						format("woff"),
+					url("./assets/typography/Montserrat/Montserrat-Regular.woff2")
+						format("woff2");
+
+				font-style: normal;
+				font-weight: normal;
+				font-display: fallback; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+			}
+
+			@font-face {
+				font-family: "Montserrat";
+
+				/* You can find the different name on https://fontdrop.info/ */
+				src:
+					local("Montserrat Bold"),
+					local("Montserrat-Bold"),
+					url("./assets/typography/Montserrat/Montserrat-Bold.woff")
+						format("woff"),
+					url("./assets/typography/Montserrat/Montserrat-Bold.woff2")
+						format("woff2");
+
+				font-style: normal;
+				font-weight: bold;
+				font-display: fallback; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+			}
+		</style>
 		<title>Platzi Travel</title>
 	</head>
-	<body>
+	<body class="font-primary">
 		<h1 class="text-center text-3xl font-bold underline">Hello world!</h1>
+		<div
+			class="bg-ima h-96 w-96 bg-(image:--img-san-francisco) bg-cover bg-no-repeat"
+		></div>
+		<h1 class="text-primary">Hello world!</h1>
 	</body>
 </html>

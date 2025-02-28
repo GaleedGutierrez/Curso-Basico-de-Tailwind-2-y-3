@@ -11,4 +11,4 @@
 **/playwright-report/**
 **/test-results/**
 **/lighthouse-report/**
-**/tailwind.css
+**/public/**/tailwind.css
